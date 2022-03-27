@@ -21,7 +21,7 @@ import {useEffect, useState} from 'react';
 
 
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Skills', 'Projects', 'Contact'];
 
 const NavLink = ({ children })=> (
   <Link
