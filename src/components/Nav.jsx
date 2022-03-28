@@ -30,7 +30,8 @@ const NavLink = ({ children })=> (
     _hover={{
       textDecoration: 'none',
       // bg: useColorModeValue('gray.100', 'gray.700'),
-      bg: useColorModeValue('blue', 'white.700'),
+      bg: useColorModeValue('whiteAlpha.700', 'whiteAlpha.900'),
+      color: 'black'
     }}
     href={'#'}>
     {children}
