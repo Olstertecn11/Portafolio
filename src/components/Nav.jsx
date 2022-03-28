@@ -30,8 +30,8 @@ const NavLink = ({ children })=> (
     _hover={{
       textDecoration: 'none',
       // bg: useColorModeValue('gray.100', 'gray.700'),
-      bg: useColorModeValue('whiteAlpha.700', 'whiteAlpha.900'),
-      color: 'black'
+      bg: useColorModeValue('purple.500', 'yellow.400'),
+      color: useColorModeValue('white', 'black')
     }}
     href={'#'}>
     {children}
@@ -67,7 +67,7 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('gray.50', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>Oliver Tzunun</Box>
+          <Box color={'gray.400'}>Oliver Tzunun</Box>
 	    
 	  <HStack spacing={8} alignItems={'center'}>
             <HStack
