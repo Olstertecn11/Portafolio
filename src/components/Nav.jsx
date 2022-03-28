@@ -16,10 +16,9 @@ import {
   Center,
   Link
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, PhoneIcon } from '@chakra-ui/icons';
+
 import {useEffect, useState} from 'react';
-
-
 
 const Links = ['Skills', 'Projects', 'Contact'];
 
@@ -30,7 +29,8 @@ const NavLink = ({ children })=> (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.100', 'gray.700'),
+      // bg: useColorModeValue('gray.100', 'gray.700'),
+      bg: useColorModeValue('blue', 'white.700'),
     }}
     href={'#'}>
     {children}
@@ -39,6 +39,7 @@ const NavLink = ({ children })=> (
 
 export default function Nav() {
     const [width, setWidth] = useState(window.innerWidth);
+    const { colorMode, toggleColorMode } = useColorMode();
     const [show, setShow] = useState('');
 
     const handleWindowSizeChange = ()=>{
@@ -61,12 +62,11 @@ export default function Nav() {
     });
 
 
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <Box bg={useColorModeValue('gray.50', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>Logo</Box>
+          <Box>Oliver Tzunun</Box>
 	    
 	  <HStack spacing={8} alignItems={'center'}>
             <HStack
@@ -77,11 +77,14 @@ export default function Nav() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
+	      {/* <Button leftIcon={<PhoneIcon />} colorScheme='pink' variant='solid'> */}
+		  {/* Contact */}
+	      {/* </Button> */}
           </HStack>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-              <Button onClick={toggleColorMode}>
+              <Button onClick={toggleColorMode} colorScheme={useColorModeValue('purple', 'orange')}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
 
