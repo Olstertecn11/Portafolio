@@ -1,4 +1,6 @@
 import './style/Nav.css';
+import NavLink  from './NavLink';
+
 import {
   Box,
   Flex,
@@ -14,29 +16,13 @@ import {
   HStack,
   useColorMode,
   Center,
-  Link
+  Icon
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, PhoneIcon } from '@chakra-ui/icons';
-
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {useEffect, useState} from 'react';
-
+import { DiJavascript1 } from 'react-icons/di';
 const Links = ['Skills', 'Projects', 'Contact'];
-
-const NavLink = ({ children })=> (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      // bg: useColorModeValue('gray.100', 'gray.700'),
-      bg: useColorModeValue('purple.500', 'yellow.400'),
-      color: useColorModeValue('white', 'black')
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
+const Refs = ['me', 'projects', 'contact'];
 
 export default function Nav() {
     const [width, setWidth] = useState(window.innerWidth);
@@ -65,17 +51,19 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.50', 'gray.900')} px={4}>
+      <Box bg={useColorModeValue('gray.200', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box color={'gray.400'}>Oliver Tzunun</Box>
-	    
+	  <HStack spacing={0}>
+	      <Box color={'gray.400'} fontSize={"xl"} fontWeight={"bold"} > Oliver Tzunun.</Box>
+	      <Icon as={DiJavascript1} color='yellow.500'  h={8} w={7}/>
+	  </HStack>
 	  <HStack spacing={8} alignItems={'center'}>
             <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map((link, index) => (
+                <NavLink key={link} ref_section={Refs[index]}>{link}</NavLink>
               ))}
             </HStack>
 	      {/* <Button leftIcon={<PhoneIcon />} colorScheme='pink' variant='solid'> */}
