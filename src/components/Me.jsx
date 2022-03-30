@@ -6,12 +6,13 @@ import {
   Stack,
   Text,
   useBreakpointValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 export default function Me() {
   return (
     <section id="me">
-	<Stack  minH={'50vh'} direction={{ base: 'column', md: 'row' }}>
+	<Stack  minH={'50vh'} direction={{ base: 'column', md: 'row' }} mt={4}>
 	      <Flex p={8} flex={1} align={'center'} justify={'center'}>
 		<Stack spacing={6} w={'full'} maxW={'lg'}>
 		  <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -43,7 +44,7 @@ export default function Me() {
 		  <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
 		    <Button
 		      rounded={'full'}
-		      bg={'yellow.400'}
+		      bg={useColorModeValue('yellow.400','yellow.400')}
 		      fontWeight={'bold'}
 		      color={'black'}
 		      _hover={{
@@ -59,7 +60,8 @@ export default function Me() {
 		<Image
 		  alt={'Login Image'}
 		  objectFit={'cover'}
-		  w={500}
+		  w={400}
+		  h={400}
 		  src={'https://github.com/Olstertecn11/Profile/blob/main/assets/img/profil.png?raw=true'}
 		/>
 	      </Flex>

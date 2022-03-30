@@ -22,7 +22,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {useEffect, useState} from 'react';
 import { DiJavascript1 } from 'react-icons/di';
 const Links = ['Skills', 'Projects', 'Contact'];
-const Refs = ['me', 'projects', 'contact'];
+const Refs = ['skills', 'projects', 'contact'];
 
 export default function Nav() {
     const [width, setWidth] = useState(window.innerWidth);
@@ -66,9 +66,6 @@ export default function Nav() {
                 <NavLink key={link} ref_section={Refs[index]}>{link}</NavLink>
               ))}
             </HStack>
-	      {/* <Button leftIcon={<PhoneIcon />} colorScheme='pink' variant='solid'> */}
-		  {/* Contact */}
-	      {/* </Button> */}
           </HStack>
 
           <Flex alignItems={'center'}>
