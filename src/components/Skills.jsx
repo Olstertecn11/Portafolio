@@ -1,36 +1,7 @@
-import { Box, SimpleGrid, Icon, Text, Stack, Flex, useColorModeValue, Badge} from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
-import { DiJsBadge, DiJava, DiPython, DiScriptcs, DiLinux, DiMysql} from "react-icons/di";
+import { Box, SimpleGrid, Icon, Stack } from '@chakra-ui/react';
+import { DiJsBadge, DiJava, DiPython, DiScriptcs, DiLinux, DiMysql, DiCss3, DiRuby, DiMongodb, DiBootstrap, DiSqllite, DiRust, DiGithubBadge} from "react-icons/di";
+import Feature from './Feature';
 
-
-const Feature = ({ title, text, icon, front, back}) => {
-  return (
-    <Stack>
-      <Flex
-        w={16}
-        h={16}
-        align={'center'}
-        justify={'center'}
-        color={'white'}
-        mb={1}>
-	{icon}
-      </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'} textAlign="justify">{text}</Text>
-      <Stack align={'left'} justify={'center'} direction={'row'} mt={6}>
-	 <Badge
-	      textTransform="capitalize"
-	      px={2}
-	      py={1}
-	      color="black"
-	      bg={useColorModeValue('yellow.50', 'yellow.300')}
-	      fontWeight={'semibold'}>
-	      {front}
-	</Badge>
-      </Stack>
-   </Stack>
-  );
-};
 
 export default function Skills() {
   return (
@@ -40,7 +11,7 @@ export default function Skills() {
 		<Feature
 		  icon={<Icon as={DiJsBadge} w={90} h={80} color="yellow.300" />}
 		  title={'JavaScript'}
-		  front={"ReactJS, NextJS, VanillaJS"}
+		  front={"ReactJS, NextJS, VanillaJS, NestJs, Express"}
 		  text={
 		      'I am JS lover, i have various projects with frameworks and libraries from nodeJS.'
 		  }
@@ -66,7 +37,7 @@ export default function Skills() {
 		<Feature
 		  icon={<Icon as={DiScriptcs} w={90} h={80} color="yellow.300" />}
 		  title={'CSharp'}
-		  front={".net, core, windowsforms"}
+		  front={".net, core, windowsForms"}
 		  text={
 		    'Same as Java i use this language for desktop applications'
 		  }
@@ -82,12 +53,22 @@ export default function Skills() {
 		<Feature
 		  icon={<Icon as={DiLinux} w={90} h={80} color="gray.300"/>}
 		  title={'Linux'}
+		  front={"ParrotOS, Debian, CuteOS, Bash"}
 		  text={
-		    'I love linux, cause this environment is awesome having nice tools for create software, also have a light system for hardware'
+		    'I love linux, cause this environment is awesome having nice tools for create software'
 		  }
 		/>
 	      </SimpleGrid>
-	    </Box>
+	    <Stack direction={'row'} w={'100%'} mt={20} justify={'center'}>
+		<Icon w={10} h={30} as={DiGithubBadge}></Icon>
+		<Icon w={10} h={30} as={DiCss3}></Icon>
+		<Icon w={10} h={30} as={DiRuby}></Icon>
+		<Icon w={10} h={30} as={DiMongodb}></Icon>
+		<Icon w={10} h={30} as={DiRust}></Icon>
+		<Icon w={10} h={30} as={DiBootstrap}></Icon>
+		<Icon w={10} h={30} as={DiSqllite}></Icon>
+	    </Stack>
+	 </Box>
         </section>
   );
 }
