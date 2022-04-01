@@ -6,6 +6,7 @@ import Separator from './components/Separator'
 import Skills from './components/Skills';
 import GoTopButton from './components/GoTopButton';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -18,6 +19,8 @@ function App() {
 		<Fade clear ></Fade>
 		<Fade bottom> <Projects /> </Fade>
 		<GoTopButton />
+		<Fade clear> <Separator showTitle={false} text="" /> </Fade>
+		<Footer />
 	    </ChakraProvider>
 	);
 }

@@ -24,10 +24,41 @@
 	"name": "ChurchApp",
 	"desc": "Web Application for Adventist Churchs in Guatemala, you can see the closest and all too",
 	"url" : "https://github.com/Olstertecn11/Portafolio",
-	"img" : "https://github.com/Olivers11/Images/blob/master/Iglesias_foto.png?raw=true",
+	"img" : "https://github.com/Olivers11/Images/blob/master/home_church.png?raw=true",
 	"icon": "jsx" ,
 	"lang": "React",
 	"complements": "React, axios and Boostrap"
+    },
+    {
+	"id": 4,
+	"name": "Notes App",
+	"desc": "A Frontend application that it allows create notes with attributes and change your status",
+	"url" : "https://github.com/Olstertecn11/notes-app",
+	"img" : "https://github.com/Olstertecn11/notes-app/blob/master/ss/nueva_nota.png?raw=true",
+	"icon": "jsx" ,
+	"lang": "React",
+	"complements": "React, axios and Boostrap"
+    },
+    {
+	"id": 5,
+	"name": "Api Notes",
+	"desc": "This is the api that use <Notes App> that response with data according to route requested",
+	"url" : "https://github.com/Olstertecn11/api_notes",
+	"img" : "https://github.com/Olstertecn11/notes-app/blob/master/ss/home.png?raw=true",
+	"icon": "tsx" ,
+	"lang": "TypeScript",
+	"complements": "NestJS, Mongoose and MongoDB"
+    },
+    {
+	"id": 6,
+	"name": "Api ChurchApp",
+	"desc": "Api that serve to frontend application the data from mysql, using routes ",
+	"url" : "https://github.com/Olstertecn11/api_churchs",
+	"img" : "https://github.com/Olivers11/Images/blob/master/Iglesias_foto.png?raw=true",
+	"icon": "js" ,
+	"lang": "Javascript",
+	"complements": "Express and MySql"
     }
+
 
 ]

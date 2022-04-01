@@ -43,6 +43,7 @@ export default function Me() {
 		  </Text>
 		  <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
 		    <Button
+		      onClick={() => window.open("https://drive.google.com/file/d/1ovosAEKkWMPKgdk-y-Jnp1FC1nBN4g8W/view?usp=sharing")} 
 		      rounded={'full'}
 		      bg={useColorModeValue('yellow.400','yellow.400')}
 		      fontWeight={'bold'}
