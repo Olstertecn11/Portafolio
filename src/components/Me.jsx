@@ -6,10 +6,15 @@ import {
   Stack,
   Text,
   useBreakpointValue,
-  useColorModeValue
+  useColorModeValue,
+  useDisclosure
 } from '@chakra-ui/react';
 
+import Contact from './Contact';
+
 export default function Me() {
+
+  const {isOpen, onOpen, onClose} = useDisclosure();
   return (
     <section id="me">
 	<Stack  minH={'50vh'} direction={{ base: 'column', md: 'row' }} mt={4}>
@@ -53,10 +58,18 @@ export default function Me() {
 		      }}>
 		      Dowload CV 
 		    </Button>
-		      <Button rounded={'full'} bg={'blue.400'} _hover={{bg:'blue.300'}}>Contact</Button>
+		      <Button 
+			rounded={'full'} 
+			bg={'blue.400'} 
+			_hover={{bg:'blue.300'}}
+			onClick={onOpen}
+			>
+			Contact
+		      </Button>
 		  </Stack>
 		</Stack>
 	      </Flex>
+	      <Contact onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
 	      <Flex flex={1}>
 		<Image
 		  alt={'Login Image'}

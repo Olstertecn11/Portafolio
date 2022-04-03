@@ -17,10 +17,10 @@ function App() {
 		<Fade bottom> <Skills />  </Fade>
 		<Fade clear> <Separator showTitle={true} text="Projects" /> </Fade>
 		<Fade clear ></Fade>
-		<Fade bottom> <Projects /> </Fade>
-		<GoTopButton />
+		<Fade clear> <Projects /> </Fade>
 		<Fade clear> <Separator showTitle={false} text="" /> </Fade>
 		<Footer />
+		<GoTopButton />
 	    </ChakraProvider>
 	);
 }
