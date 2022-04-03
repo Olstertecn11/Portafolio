@@ -33,6 +33,10 @@ export default function Nav() {
 	setWidth(window.innerWidth);
     }
 
+    const goToSection = (section)=>{
+	document.getElementById(section).scrollIntoView({behavior: 'smooth'});
+    }
+
 
     useEffect(()=>{
 	window.addEventListener('resize', handleWindowSizeChange);
@@ -101,9 +105,9 @@ export default function Nav() {
                   </Center>
                   <br />
                   <MenuDivider />
-                  <MenuItem>Skills</MenuItem>
-                  <MenuItem>Projects</MenuItem>
-                  <MenuItem>Contact</MenuItem>
+		    <MenuItem onClick={()=>goToSection('skills')}>Skills</MenuItem>
+		    <MenuItem onClick={()=>goToSection('projects')}>Projects</MenuItem>
+		    <MenuItem onClick={()=>goToSection('contact')}>Contact</MenuItem>
                 </MenuList>
               </Menu>
             </Stack>

@@ -10,7 +10,7 @@ const Projects = ()=>{
 		    {
 			data.map(item => {
 			    return(
-				<ProjectCard key={item}  project={item} />
+				<ProjectCard key={item.id}  project={item} />
 			    )
 		        })
 		    }
