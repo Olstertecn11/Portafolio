@@ -1,5 +1,6 @@
-import { Container, Stack, Badge,IconButton, Text } from '@chakra-ui/react';
+import { Container, Stack, Badge,IconButton, Text, useColorModeValue } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa';
+
 
 export default function Footer(){
     return(
@@ -35,7 +36,7 @@ export default function Footer(){
 			    />
 		    </Badge>
 		  </Stack>
-		  <Text fontSize="sm" color="whiteAlpha.600" fontWeight="bold" align="center" >
+		  <Text fontSize="sm" color={useColorModeValue('blackAlpha.500', 'whiteAlpha.600')} fontWeight="bold" align="center" >
 		    &copy; {new Date().getFullYear()} Oliver Tzunun.  All rights reserved.
 		  </Text>
 		</Stack>

@@ -16,13 +16,12 @@ function App() {
 		<Fade clear> <Separator showTitle={true}  text="Skills"/> </Fade>
 		<Fade bottom> <Skills />  </Fade>
 		<Fade clear> <Separator showTitle={true} text="Projects" /> </Fade>
-		<Fade clear ></Fade>
-		<Fade clear> <Projects /> </Fade>
+		<Projects />
 		<Fade clear> <Separator showTitle={false} text="" /> </Fade>
 		<Footer />
 		<GoTopButton />
 	    </ChakraProvider>
 	);
 }
-
 export default App;
+

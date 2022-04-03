@@ -101,13 +101,12 @@ export default function Nav() {
                   </Center>
                   <br />
                   <Center>
-                    <p>Oliver</p>
+                    <p>Oliver Dev</p>
                   </Center>
                   <br />
                   <MenuDivider />
 		    <MenuItem onClick={()=>goToSection('skills')}>Skills</MenuItem>
 		    <MenuItem onClick={()=>goToSection('projects')}>Projects</MenuItem>
-		    <MenuItem onClick={()=>goToSection('contact')}>Contact</MenuItem>
                 </MenuList>
               </Menu>
             </Stack>
