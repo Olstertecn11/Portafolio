@@ -16,7 +16,7 @@ export default function getIcon(icon){
 	return <SiTypescript fontSize={30} color="orange" />
     }
     else{
-	return <DiJava fontSize={30}  color="orange" />;
+	    return <DiJava fontSize={30}  color="orange" />;
     }
 }
 

@@ -42,8 +42,8 @@ export default function Me() {
 		    </Text>{' '}
 		  </Heading>
 		  <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} textAlign={"justify"}>
-		      Hello, my name is Oliver, i'm student of systems engineering and programming lover.
-		      I like learn and put into practice all that i know, don't know everything but i will
+		      Hello, my name is Oliver, I'm student of systems engineering and programming lover.
+		      I like learn and put into practice all that I know, don't know everything but I will
 		      always give my all.
 		  </Text>
 		  <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>

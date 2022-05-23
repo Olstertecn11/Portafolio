@@ -13,7 +13,7 @@ export default function Skills() {
 		  title={'JavaScript'}
 		  front={"ReactJS, NextJS, VanillaJS, NestJs, Express"}
 		  text={
-		      'I am JS lover, i have various projects with frameworks and libraries from nodeJS.'
+		      'I am JS lover, I have various projects with frameworks and libraries from nodeJS.'
 		  }
 		/>
 		<Feature
@@ -21,7 +21,7 @@ export default function Skills() {
 		  title={'Python'}
 		  front={"Flask, Django, OpenCV, Pyfirmata"}
 		  text={
-		    'Python is the language that i use for multiples applications for variety of packages that he has '
+		    'Python is the language that I use for multiples applications for variety of packages that he has '
 		  }
 		/>
 		<Feature
@@ -39,7 +39,7 @@ export default function Skills() {
 		  title={'CSharp'}
 		  front={".net, core, windowsForms"}
 		  text={
-		    'Same as Java i use this language for desktop applications'
+		    'Same as Java I use this language for desktop applications'
 		  }
 		/>
 		<Feature
@@ -47,7 +47,7 @@ export default function Skills() {
 		  title={'Mysql'}
 		  front={"Worckbench, PhpMyAdmin, Shell"}
 		  text={
-		    'i am familiarized with this manager database, working with various managers'
+		    'I am familiarized with this manager database, working with various managers'
 		  }
 		/>
 		<Feature
