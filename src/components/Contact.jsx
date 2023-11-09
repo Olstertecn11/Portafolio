@@ -45,15 +45,15 @@ function Contact({ isOpen, onClose }) {
       message: contentRef.current.value,
       reply_to: emailRef.current.value,
     };
+    emailjs.send('service_kt3h13s', 'template_pi4jjid', templateParams, 'a2DG14lDuzHz2Enzj')
+      .then((result) => {
+        onClose();
+        showSwal();
+      }, (error) => {
+        console.log(error.text);
+      });
     onClose();
     showSwal();
-    // emailjs.send('service_kt3h13s', 'template_pi4jjid', templateParams, 'a2DG14lDuzHz2Enzj')
-    //   .then((result) => {
-    //     onClose();
-    //     showSwal();
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
   }
 
 
