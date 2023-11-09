@@ -1,0 +1,94 @@
+[
+    {
+	"id": 1,
+	"name": "Python Editor",
+	"desc": "Code Editor writed in javascript with the functionality of run python in the same file",
+	"url" : "https://github.com/Olivers11/Editor_Python",
+	"img" : "https://raw.githubusercontent.com/Olivers11/Images/master/PythonEditor.png",
+	"icon": "js",
+	"lang": "Javascript",
+	"complements": "VanillaJS with Electron and CSS"
+    },
+    {
+	"id": 2,
+	"name": "Snake Game",
+	"desc": "This is a version of the famous snake game maked with lua",
+	"url": "https://github.com/olstertecn11/snakegame",
+	"img": "https://raw.githubusercontent.com/olstertecn11/snakegame/main/screenshot.png",
+	"icon": "lua",
+	"lang": "Lua",
+	"complements": "Love library for 2D games"
+    },
+    {
+	"id": 3,
+	"name": "ChurchApp",
+	"desc": "Web Application for Adventist Churchs in Guatemala, you can see the closest and all too",
+	"url" : "https://github.com/Olstertecn11/",
+	"img" : "https://github.com/Olivers11/Images/blob/master/home_church.png?raw=true",
+	"icon": "jsx" ,
+	"lang": "React",
+	"complements": "React, axios and Boostrap"
+    },
+    {
+	"id": 4,
+	"name": "OVG",
+	"desc": "This website is an administrative panel for the in3 volcanology department",
+	"url" : "https://github.com/Olstertecn11/Portafolio",
+	"img" : "https://github.com/Olstertecn11/imageslol/blob/main/ovg.png?raw=true",
+	"icon": "php" ,
+	"lang": "PHP",
+	"complements": "PHP, JQuery and Boostrap"
+    },
+    {
+	"id": 5,
+	"name": "GraphicsJS",
+	"desc": "A small library made with javascript to be able to draw spectra and export them as image and pdf",
+	"url" : "https://github.com/Olstertecn11/Portafolio",
+	"img" : "https://user-images.githubusercontent.com/49626428/259842225-6454816b-1122-44ff-8675-e51d33bc02f8.png",
+	"icon": "js" ,
+	"lang": "Javascript",
+	"complements": "Javascript, VanillaJS"
+    },
+    {
+	"id": 6,
+	"name": "SSG",
+	"desc": "Collaborator in this mobile app, this application warns about seismic events in Guatemala, also has information functionalities and belongs to the SSG",
+	"url" : "https://github.com/Olstertecn11/Portafolio",
+	"img" : "https://play-lh.googleusercontent.com/-BcQhtG_wzM_p3YLPJx8eYhejNjtwIMn5lUiY4hUjy79J4dYePcxy7_dZlYtgVLlBHU=w2560-h1440-rw",
+	"icon": "dart" ,
+	"lang": "Flutter",
+	"complements": "Dart, Flutter"
+    },
+    {
+	"id": 7,
+	"name": "Notes App",
+	"desc": "A Frontend application that it allows create notes with attributes and change your status",
+	"url" : "https://github.com/Olstertecn11/notes-app",
+	"img" : "https://github.com/Olstertecn11/notes-app/blob/master/ss/nueva_nota.png?raw=true",
+	"icon": "jsx" ,
+	"lang": "React",
+	"complements": "React, axios and Boostrap"
+    },
+    {
+	"id": 8,
+	"name": "Api Notes",
+	"desc": "This is the api that use <Notes App> that response with data according to route requested",
+	"url" : "https://github.com/Olstertecn11/api_notes",
+	"img" : "https://github.com/Olstertecn11/notes-app/blob/master/ss/home.png?raw=true",
+	"icon": "tsx" ,
+	"lang": "TypeScript",
+	"complements": "NestJS, Mongoose and MongoDB"
+    },
+    {
+	"id": 9,
+	"name": "Api ChurchApp",
+	"desc": "Api that serve to frontend application the data from mysql, using routes ",
+	"url" : "https://github.com/Olstertecn11/api_churchs",
+	"img" : "https://github.com/Olivers11/Images/blob/master/Iglesias_foto.png?raw=true",
+	"icon": "js" ,
+	"lang": "Javascript",
+	"complements": "Express and MySql"
+    }
+
+
+]
