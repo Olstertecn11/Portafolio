@@ -26,7 +26,7 @@ const Projects = () => {
 
   return (
 
-    <section id="projects">
+    <section id="projects" className='back'>
       <Container maxW={'3xl'}>
         <Stack
           as={Box}

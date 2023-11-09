@@ -38,7 +38,7 @@ export default function Me() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <section id="me">
-      <Stack minH={'50vh'} direction={{ base: 'column', md: 'row' }} mt={4}>
+      <Stack minH={'50vh'} direction={{ base: 'column', md: 'row' }} mt={4} className="back">
         <Flex p={8} flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>

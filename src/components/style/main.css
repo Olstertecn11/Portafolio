@@ -38,3 +38,10 @@ html{
 box-shadow: 10px 0px 22px black;
   backdrop-filter: blur(10px);
 }
+
+
+.back{
+  z-index: -1;
+  position: relative;
+}
+

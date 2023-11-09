@@ -21,6 +21,7 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 import { DiJavascript1 } from 'react-icons/di';
+import { useNavigate } from 'react-router-dom';
 const Links = ['Inicio', 'Skills', 'Projects'];
 const Refs = ['', 'Skills', 'Projects',];
 
@@ -28,6 +29,7 @@ export default function Nav() {
   const [width, setWidth] = useState(window.innerWidth);
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState('');
+  const history = useNavigate();
 
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
@@ -96,7 +98,7 @@ export default function Nav() {
                   <Center>
                     <Avatar
                       size={'2xl'}
-                      src={'https://github.com/Olivers11/Images/blob/master/profil_portafolio-modified.png?raw=true'}
+                      src={'https://scontent.fgua9-2.fna.fbcdn.net/v/t1.6435-9/134067461_1120900738349607_7829366247986463078_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7a1959&_nc_ohc=7uS-DRjvwasAX_CEwNy&_nc_ht=scontent.fgua9-2.fna&cb_e2o_trans=q&oh=00_AfB_jauaVdAcgUWZJxmLWcTyLUQ0vnhW-P7cnfJCmbAWEA&oe=6574CAE3'}
                     />
                   </Center>
                   <br />
@@ -105,8 +107,9 @@ export default function Nav() {
                   </Center>
                   <br />
                   <MenuDivider />
-                  <MenuItem onClick={() => goToSection('skills')}>Skills</MenuItem>
-                  <MenuItem onClick={() => goToSection('projects')}>Projects</MenuItem>
+                  <MenuItem onClick={() => history('/')}>Inicio</MenuItem>
+                  <MenuItem onClick={() => history('/Skills')}>Skills</MenuItem>
+                  <MenuItem onClick={() => history('/Projects')}>Projects</MenuItem>
                 </MenuList>
               </Menu>
             </Stack>
