@@ -98,8 +98,7 @@ export default function Me() {
             borderRadius={180}
             w={300}
             h={300}
-            src={'https://scontent.fgua3-3.fna.fbcdn.net/v/t39.30808-6/353425584_1715920818847593_3535667704392499240_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=W5pg9jXdbTAAX_VwL4O&_nc_ht=scontent.fgua3-3.fna&cb_e2o_trans=q&oh=00_AfCQhfcAnwipbbB--sYTVqEewOjpk0kyUFo-xJg3G6RiWg&oe=6551A015'}
-          />
+            src={'https://olstertecn11.github.io/Profile/assets/img/profil.png'} />
         </Flex>
       </Stack>
       <img className='img-sep' src="https://github.com/Olstertecn11/imageslol/blob/main/wave-haikei.png?raw=true" width={'100%'} height={'10%'} />
