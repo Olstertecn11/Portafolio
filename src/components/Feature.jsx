@@ -13,7 +13,7 @@ const Feature = ({ title, text, icon, front }) => {
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'} textAlign="justify">{text}</Text>
+      <Text color={'gray.400'} textAlign="justify">{text}</Text>
       <Stack align={'left'} justify={'center'} direction={'row'} mt={6}>
         <Badge
           textTransform="capitalize"

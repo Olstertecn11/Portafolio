@@ -8,10 +8,10 @@ import { useState } from 'react';
 export default function Skills() {
 
   const [pos, setPos] = useState(0)
-  const titles = ["My Development Skills", "Me at Work"]
+  const titles = ["Habilidades de Desarrollo", "Yo en el trabajo"]
   const paraps = [
-    "Maybe I don't know everything, but I assure you that whatever you can imagine, I can do it, it may take me a long time or a little while, but I will do it."
-    , "I have good skills working with productive colleagues, this way I believe we support each other as a team. I  also like to help others"]
+    "Quizás no sepa todo, pero te aseguro que lo que puedas imaginar, puedo hacerlo, puede que me tarde mucho o poco, pero lo haré.",
+    "Tengo buenas habilidades trabajando con colegas productivos, de esta manera creo que nos apoyamos mutuamente como equipo. También me gusta ayudar a los demás."]
 
   const handleChange = (newpos) => {
     setPos(newpos);
@@ -24,7 +24,7 @@ export default function Skills() {
         w={'full'}
         h={'100vh'}
       >
-        <img className='img-container' src="https://github.com/Olstertecn11/imageslol/blob/main/setup1.JPG?raw=true" alt="" />
+        <img className='img-container' src="https://github.com/Olstertecn11/imageslol/blob/main/setup.jpg?raw=true" alt="" />
         <VStack
           w={'full'}
           justify={'center'}
@@ -52,7 +52,7 @@ export default function Skills() {
                 rounded={'full'}
                 color={'white'}
                 _hover={{ bg: 'blue.500' }}>
-                Development Skills
+                Habilidades de Desarrollo
               </Button>
               <Button
                 onClick={() => handleChange(1)}
@@ -60,7 +60,7 @@ export default function Skills() {
                 rounded={'full'}
                 color={'white'}
                 _hover={{ bg: 'whiteAlpha.500' }}>
-                Working Skills
+                Yo en el trabajo
               </Button>
             </Stack>
           </Stack>
@@ -73,7 +73,7 @@ export default function Skills() {
             title={'JavaScript'}
             front={"ReactJS, NextJS, React Native, NestJS, Express"}
             text={
-              'I am JS lover, I have various projects with frameworks and libraries from nodeJS. For web and mobile apps'
+              'Soy un amante de JS, tengo varios proyectos con frameworks y librerías de nodeJS. Para aplicaciones web y móviles'
             }
           />
           <Feature
@@ -81,7 +81,7 @@ export default function Skills() {
             title={'Python'}
             front={"Flask, Django, OpenCV, PyFirmata"}
             text={
-              'Python is the language that I use for multiples applications for variety of packages that he has'
+              'Python es el lenguaje que uso para múltiples aplicaciones por la variedad de paquetes que tiene'
             }
           />
           <Feature
@@ -89,7 +89,7 @@ export default function Skills() {
             title={'Java'}
             front={"JSP, Swing, AndroidStudio"}
             text={
-              'This Language is more used for desktop applications and simple web pages'
+              'Este lenguaje lo uso más para aplicaciones de escritorio y páginas web simples'
             }
           />
         </SimpleGrid>
@@ -99,7 +99,7 @@ export default function Skills() {
             title={'CSharp'}
             front={".net, core, windowsForms"}
             text={
-              'Same as Java I use this language for desktop applications'
+              'Lo mismo que Java, uso este lenguaje para aplicaciones de escritorio'
             }
           />
           <Feature
@@ -107,7 +107,7 @@ export default function Skills() {
             title={'Mysql'}
             front={"Worckbench, PhpMyAdmin, Shell"}
             text={
-              'I am familiarized with this manager database, working with various managers'
+              'Estoy familiarizado con este gestor de base de datos, trabajando con varios gestores'
             }
           />
           <Feature
@@ -115,7 +115,7 @@ export default function Skills() {
             title={'Linux'}
             front={"ParrotOS, Debian, Bash, Arch BTW"}
             text={
-              'I love linux, cause this environment is awesome having nice tools for create software(Neovim❤️)'
+              'Amo linux, porque este entorno es increíble, tiene herramientas geniales para crear software (Neovim❤️)'
             }
           />
         </SimpleGrid>

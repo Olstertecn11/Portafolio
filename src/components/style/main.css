@@ -1,10 +1,9 @@
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
 
-.img-container{
+.img-container {
   z-index: -1;
   position: absolute;
   top: -10%;
@@ -13,29 +12,29 @@ html{
 
 
 
-.footer{
+.footer {
   position: static;
   bottom: 0%;
   width: 100%;
   max-width: 100% !important;
 }
 
-.nav{
+.nav {
   padding-left: 4vw !important;
   padding-right: 4vw !important;
 }
 
-.links{
+.links {
   margin-left: -8vw;
 }
 
-.img-sep{
+.img-sep {
   width: 100%;
   height: 14vw;
 }
 
-.blur{
-box-shadow: 10px 0px 22px black;
+.blur {
+  box-shadow: 10px 0px 22px black;
   backdrop-filter: blur(10px);
 }
 
@@ -43,10 +42,9 @@ box-shadow: 10px 0px 22px black;
 
 
 
-@media screen and (max-width: 991px) and (orientation:portrait){
-.back{
-  z-index: -1;
-  position: relative;
+@media screen and (max-width: 991px) and (orientation:portrait) {
+  .back {
+    z-index: -1;
+    position: relative;
+  }
 }
-}
-

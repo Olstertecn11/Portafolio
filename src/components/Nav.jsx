@@ -22,8 +22,8 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 import { DiJavascript1 } from 'react-icons/di';
 import { useNavigate } from 'react-router-dom';
-const Links = ['Inicio', 'Skills', 'Projects'];
-const Refs = ['', 'Skills', 'Projects',];
+const Links = ['Inicio', 'Habilidades', 'Proyectos'];
+const Refs = ['', 'Skills', 'Projects'];
 
 export default function Nav() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -108,8 +108,8 @@ export default function Nav() {
                   <br />
                   <MenuDivider />
                   <MenuItem onClick={() => history('/')}>Inicio</MenuItem>
-                  <MenuItem onClick={() => history('/Skills')}>Skills</MenuItem>
-                  <MenuItem onClick={() => history('/Projects')}>Projects</MenuItem>
+                  <MenuItem onClick={() => history('/Skills')}>Habilidades</MenuItem>
+                  <MenuItem onClick={() => history('/Projects')}>Proyectos</MenuItem>
                 </MenuList>
               </Menu>
             </Stack>

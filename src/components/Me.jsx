@@ -63,9 +63,8 @@ export default function Me() {
               </Text>{' '}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={colorMode == 'dark' ? 'white' : 'gray.500'} textAlign={"justify"}>
-              Hello, my name is Oliver, I'm student of systems engineering and programming lover.
-              I like learn and put into practice all that I know, don't know everything but I will
-              always give my all.
+              Hola mi nombre es Oliver, pensum cerrado de Ingeniería de sistemas y amante de la programación.
+              Me gusta aprender y poner en práctica todo lo que sé, no lo sé todo pero siempre daré lo mejor de mí.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
               <Button
@@ -77,7 +76,7 @@ export default function Me() {
                 _hover={{
                   bg: 'yellow.500',
                 }}>
-                Dowload CV
+                Descargar CV
               </Button>
               <Button
                 rounded={'full'}
@@ -85,7 +84,7 @@ export default function Me() {
                 _hover={{ bg: 'blue.300' }}
                 onClick={onOpen}
               >
-                Contact
+                Contactar
               </Button>
             </Stack>
           </Stack>
@@ -125,11 +124,11 @@ export default function Me() {
               p={2}
               alignSelf={'flex-start'}
               rounded={'md'}>
-              Who is Oliver?
+              ¿Quién es Oliver?
             </Text>
-            <Heading>An obsessive programmer...</Heading>
+            <Heading>Un programador obsesionado...</Heading>
             <Text color={'gray.500'} fontSize={'lg'}>
-              I took advantage of the pandemic to study a lot about various programming topics, from then on it became a habit for me to be self-taught.
+              Soy un apasionado de la programación, me gusta aprender y compartir mis conocimientos con los demás.
             </Text>
             <Stack
               spacing={4}
@@ -139,17 +138,17 @@ export default function Me() {
               <Feature
                 icon={<Icon as={IoLogoYoutube} color={'white.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('yellow.100', 'red.900')}
-                text={'Content Creator'}
+                text={'Creador de Contenido'}
               />
               <Feature
                 icon={<Icon as={IoLogoGithub} color={'white.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('green.100', 'gray.900')}
-                text={'Open Source Collaborator'}
+                text={'Contribuidor Open Source'}
               />
               <Feature
                 icon={<Icon as={IoBook} color={'white.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('purple.100', 'purple.900')}
-                text={'Programming and Maths tutor'}
+                text={'Tutor de Programación y Matemáticas'}
               />
             </Stack>
           </Stack>

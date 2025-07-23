@@ -37,13 +37,13 @@ const Projects = () => {
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            <b>Please look at</b> <br />
+            <b>Por favor, mira</b> <br />
             <Text as={'span'} color={'#FFD700'}>
-              my work
+              mi trabajo
             </Text>
           </Heading>
           <Text color={useColorModeValue('gray.800', 'gray.400')}>
-            These are some projects that I have done, in some I have been a great collaborator and others are 100% my own, you can see in them a demonstration of what I can do.
+            Estos son algunos proyectos que he realizado, en algunos he sido un gran colaborador y otros son 100% míos, puedes ver en ellos una demostración de lo que puedo hacer.
           </Text>
           <Stack
             direction={'column'}
