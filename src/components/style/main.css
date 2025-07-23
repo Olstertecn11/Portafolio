@@ -48,3 +48,13 @@ html {
     position: relative;
   }
 }
+
+
+/* Media for mobile devices*/
+@media screen and (max-width: 991px) {
+  .img-container {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
