@@ -19,7 +19,6 @@ export default function Layout({ children, isNavInside = false }) {
       <main>
         {content}
       </main>
-      <Footer />
     </div>
   );
 }

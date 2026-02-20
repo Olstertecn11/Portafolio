@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/JetBrainsMonoNerdFontMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -42,9 +50,57 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.prompt {
+  display: flex;
+  align-items: stretch;
+  /* Estira el fondo para que no haya huecos */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  user-select: none;
+  /* Evita que al seleccionar texto se vea raro */
+}
 
+.prompt span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
+/* --- SEGMENTOS DE TEXTO --- */
+.user {
+  background-color: #546E6E;
+  /* Azul Agnoster */
+  color: #ffffff;
+  padding-left: 10px;
+}
 
+.path {
+  background-color: #192929;
+  /* Gris oscuro */
+  color: #eeeeee;
+  padding-left: 8px;
+}
+
+.sep-0 {
+  color: #546E6E;
+  margin-left: -1px;
+}
+
+/* --- SEPARADORES (LAS FLECHAS) --- */
+.sep-1 {
+  color: #546E6E;
+  background-color: #192929;
+  margin-left: -1px;
+  /* El truco para pegar */
+}
+
+.sep-2 {
+  color: #192929;
+  /* El fondo es transparente si no hay más segmentos */
+  background-color: transparent;
+  margin-left: -1px;
+}
 
 @media screen and (max-width: 991px) and (orientation:portrait) {
   .back {

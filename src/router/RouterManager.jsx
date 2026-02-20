@@ -17,7 +17,6 @@ export default function RouterManager() {
           } exec={route.isMain ?? false} />
         ))}
       </Routes>
-      <GoTopButton />
     </BrowserRouter>
   );
 };
