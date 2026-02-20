@@ -11,8 +11,8 @@ import {
   useColorMode
 } from '@chakra-ui/react';
 
-import Contact from './Contact';
-import './style/main.css';
+import ContactModal from '../../components/common/ContactModal'
+import '../../style/main.css'
 
 import {
   Container,
@@ -32,7 +32,7 @@ const Feature = ({ text, icon, iconBg }) => {
     </Stack>
   )
 }
-export default function Me() {
+export default function Home({ NavbarComponent }) {
 
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -89,7 +89,7 @@ export default function Me() {
             </Stack>
           </Stack>
         </Flex>
-        <Contact onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
+        <ContactModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
         <Flex flex={1}>
           <Image
             alt={'Login Image'}

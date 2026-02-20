@@ -1,4 +1,3 @@
-import './style/Nav.css';
 import NavLink from './NavLink';
 
 import {
@@ -25,7 +24,7 @@ import { useNavigate } from 'react-router-dom';
 const Links = ['Inicio', 'Habilidades', 'Proyectos'];
 const Refs = ['', 'Skills', 'Projects'];
 
-export default function Nav() {
+export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState('');
@@ -57,7 +56,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.200', 'gray.900')} px={4} backdropFilter="blur(10px)" className="nav" >
+      <Box px={4} backdropFilter="blur(10px)" className="nav" >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={0}>
             <Box color={'gray.400'} fontSize={"xl"} fontWeight={"bold"} > Oliver Tzunun.</Box>

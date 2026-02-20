@@ -1,7 +1,7 @@
 import { DiJavascript1, DiReact, DiJava, DiPhp, DiDart } from 'react-icons/di';
 import { SiLua, SiTypescript } from 'react-icons/si';
 
-export default function getIcon(icon) {
+export default function getIconByExtension(icon) {
 
   if (icon === "js") {
     return <DiJavascript1 fontSize={30} color="#B78E00" />;

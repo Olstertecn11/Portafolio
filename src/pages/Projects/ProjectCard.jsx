@@ -1,12 +1,12 @@
 import { Center, Stack, Image, Text, Heading, Button } from '@chakra-ui/react';
 import { useColorModeValue, Box } from '@chakra-ui/react';
-import getIcon from './getIcon';
+import getIconFromExtension from '../../utils/IconHelper'
 import { FaEye } from 'react-icons/fa';
 
 export default function ProjectCard({ project }) {
 
   const { name, desc, url, img, icon, complements, lang } = project;
-  const _icon = getIcon(icon);
+  const _icon = getIconFromExtension(icon);
   const handleClick = () => {
     window.open(url);
   }

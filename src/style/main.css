@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: white !important;
+}
+
 
 .img-container {
   z-index: -1;
@@ -57,4 +61,18 @@ html {
     width: 100%;
     object-fit: cover;
   }
+}
+
+
+
+/* Button  GO TOP BUTTOn*/
+.goTopHidden {
+  display: none;
+}
+
+.goTop {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
