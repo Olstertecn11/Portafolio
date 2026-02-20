@@ -1,97 +1,120 @@
-import ProjectCard from './ProjectCard';
-import data from './../../data/projects.json'
+import React, { useState } from "react";
 import {
-  Box,
-  SimpleGrid,
-  Heading,
-  Container,
-  Text,
-  Button,
-  Stack,
-  Icon,
-  useColorModeValue,
-  createIcon,
-  IconButton
-} from '@chakra-ui/react'
+  Image, useBreakpointValue, Heading, HStack, Box,
+  Text, SimpleGrid, Link, Badge, VStack, Button
+} from "@chakra-ui/react";
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import TerminalPrompt from '../../components/common/TerminalPrompt';
 
-import { FaArrowDown } from 'react-icons/fa';
+export default function Projects() {
+  const [filter, setFilter] = useState("All");
 
-const Projects = () => {
+  const myProjects = [
+    { name: "Python_Editor.js", desc: "Editor de código con ejecución de Python en tiempo real.", tech: ["Javascript", "Electron"], type: "Tool", color: "#f7df1e" },
+    { name: "Snake_Game.lua", desc: "Versión del clásico juego Snake usando el motor LÖVE.", tech: ["Lua"], type: "Game", color: "#51a2da" },
+    { name: "ChurchApp_GT", desc: "Localizador y gestión de iglesias adventistas en Guatemala.", tech: ["React", "Javascript"], type: "Web App", color: "#61dafb" },
+    { name: "OVG_Volcanology", desc: "Panel administrativo para el departamento de vulcanología in3.", tech: ["PHP", "JQuery"], type: "Admin Panel", color: "#777bb4" },
+    { name: "GraphicsJS_Lib", desc: "Librería para dibujar espectros y exportar a PDF/Imagen.", tech: ["Javascript"], type: "Library", color: "#f0db4f" },
+    { name: "SSG_Mobile", desc: "App de alertas sísmicas para Guatemala (Colaborador).", tech: ["Flutter"], type: "Mobile", color: "#02569b" },
+    { name: "Notes_Stack", desc: "Ecosistema de Notas (Frontend + API con NestJS).", tech: ["React", "TypeScript", "NestJS"], type: "Fullstack", color: "#e0234e" },
+  ];
 
-  const handleClick = () => {
-    const section = document.getElementById('cards');
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
+  // Extraer tecnologías únicas para los botones de filtro
+  const allTechs = ["All", ...new Set(myProjects.flatMap(p => p.tech))];
 
+  // Filtrar la lista según la selección
+  const filteredProjects = filter === "All"
+    ? myProjects
+    : myProjects.filter(p => p.tech.includes(filter));
 
   return (
-
-    <section id="projects" className='back'>
-      <Container maxW={'3xl'}>
-        <Stack
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            lineHeight={'110%'}>
-            <b>Por favor, mira</b> <br />
-            <Text as={'span'} color={'#FFD700'}>
-              mi trabajo
-            </Text>
-          </Heading>
-          <Text color={useColorModeValue('gray.800', 'gray.400')}>
-            Estos son algunos proyectos que he realizado, en algunos he sido un gran colaborador y otros son 100% míos, puedes ver en ellos una demostración de lo que puedo hacer.
+    <Box mt={4}>
+      <HStack height="20%" width="100%" spacing={44} paddingX={'8rem'} py={'2rem'} justifyContent={'space-between'}>
+        <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+          <Text as={'span'} position={'relative'} _after={{ content: "''", width: 'full', height: '30%', position: 'absolute', bottom: 1, left: 0, bg: '#a2b0b0', zIndex: -1 }}>
+            Software
           </Text>
-          <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
+          <br />
+          <Text color={'#72a1a1'} as={'span'}>Developer</Text>
+        </Heading>
+        <Image src="https://github.com/Olstertecn11/imageslol/blob/main/mee.jpeg?raw=true" width="200px" height="200px" borderRadius="full" objectFit={'cover'} />
+      </HStack>
+
+      <Box px={'8rem'} mb={16}>
+        <TerminalPrompt path="~/Projects" command={`grep --include='*.{${filter}}' *`} />
+
+        {/* BARRA DE FILTROS (Simulando parámetros de comando) */}
+        <HStack spacing={3} mt={6} mb={8} wrap="wrap">
+          <Text color="gray.500" fontFamily="mono" fontSize="sm">Filter by:</Text>
+          {allTechs.map(tech => (
             <Button
-              href="#cards"
-              onClick={handleClick}
-              colorScheme={'green'}
-              fontWeight={'bold'}
-              bg={'#FFD700'}
-              color={useColorModeValue('#1A202C', '#1A202C')}
-              rounded={'full'}
-              px={6}
-              _hover={{
-                bg: 'yellow.400',
-              }}>
-              Ver Proyectos
-              <IconButton
-                background={'transparent'}
-                margin={0}
-                as="a"
-                aria-label="Twitter"
-                icon={<FaArrowDown color={'#1A202C'} fontSize="1.25rem" />}
-              />
+              key={tech}
+              size="xs"
+              variant="outline"
+              fontFamily="mono"
+              color={filter === tech ? "white" : "gray.400"}
+              borderColor={filter === tech ? "green.400" : "gray.600"}
+              bg={filter === tech ? "#2d4a3e" : "transparent"}
+              _hover={{ bg: "#2d4a3e", borderColor: "green.400" }}
+              onClick={() => setFilter(tech)}
+            >
+              --{tech.toLowerCase()}
             </Button>
-            <Box>
+          ))}
+        </HStack>
+
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} overflowY="auto" maxHeight="60vh" pr={2}
+          sx={{
+            '&::-webkit-scrollbar': { width: '8px' },
+            '&::-webkit-scrollbar-track': { background: '#2B3439' },
+            '&::-webkit-scrollbar-thumb': { background: '#D9E3D9', borderRadius: '4px' },
+            '&::-webkit-scrollbar-thumb:hover': { background: '#9FA9A4' },
+          }}
+        >
+          {filteredProjects.map((project, index) => (
+            <Box
+              key={index}
+              p={5}
+              border="1px solid #ffffff22"
+              borderRadius="md"
+              bg="#00000033"
+              transition="all 0.3s"
+              _hover={{ transform: 'scale(1.02)', borderColor: project.color }}
+            >
+              <VStack align="start" spacing={2}>
+                <HStack width="100%" justifyContent="space-between">
+                  <Text fontWeight="bold" fontSize="xl" color={project.color} fontFamily="mono">
+                    {project.name}
+                  </Text>
+                  <Badge variant="subtle" colorScheme="whiteAlpha">{project.type}</Badge>
+                </HStack>
+
+                <Text color="#a2b0b0" fontSize="sm" fontFamily="mono">
+                  {project.desc}
+                </Text>
+
+                <HStack wrap="wrap">
+                  {project.tech.map((t) => (
+                    <Text key={t} fontSize="xs" color="#81a1c1" fontFamily="mono">
+                      #{t}
+                    </Text>
+                  ))}
+                </HStack>
+
+                <Link pt={2} color="green.300" fontSize="xs" _hover={{ color: 'white', textDecoration: 'none' }}>
+                  $ run_demo --live <ExternalLinkIcon mx="2px" />
+                </Link>
+              </VStack>
             </Box>
-          </Stack>
-        </Stack>
-      </Container>
-      <section id="cards">
-        <Box >
-          <SimpleGrid columns={{ base: 1, md: 3 }}>
-            {
-              data.map(item => {
-                return (
-                  <ProjectCard key={item.id} project={item} />
-                )
-              })
-            }
-          </SimpleGrid>
-        </Box>
-      </section>
-    </section>
+          ))}
+        </SimpleGrid>
+
+        {filteredProjects.length === 0 && (
+          <Text color="red.400" fontFamily="mono" mt={10}>
+            [ERROR] No projects found with tag: --{filter.toLowerCase()}
+          </Text>
+        )}
+      </Box>
+    </Box>
   );
 }
-
-export default Projects;

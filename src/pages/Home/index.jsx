@@ -5,6 +5,8 @@ import { MdClose } from "react-icons/md";
 import AboutMe from "../About";
 import React from "react";
 import Skills from "../Skills";
+import Projects from "../Projects";
+import Contact from "../../pages/Contact";
 
 export default function Home() {
   // Guardamos un string para identificar la sección activa
@@ -15,6 +17,8 @@ export default function Home() {
     switch (activeSection) {
       case 'about': return <AboutMe />;
       case 'skills': return <Skills />;
+      case 'contact': return <Contact isOpen={true} onClose={() => setActiveSection('about')} />;
+      case 'projects': return <Projects />;
       default: return <AboutMe />;
     }
   };
@@ -70,7 +74,21 @@ export default function Home() {
           >
             <HStack spacing={0} position={'relative'}>
               <Box color={activeSection === 'projects' ? 'white' : 'gray.400'} fontSize={"xl"} fontWeight={"bold"} > Projects </Box>
-              <Icon as={MdClose} color='gray.100' h={4} w={6} marginLeft={'7rem'} marginTop={'.2vw'} />
+              <Icon as={MdClose} color='gray.100' h={4} w={6} marginLeft={'6rem'} marginTop={'.2vw'} />
+            </HStack>
+          </Box>
+
+          <Box position='absolute' top={'-44px'} left={'688px'} width={'14rem'} height={'2.5rem'}
+            // Si el estado es 'skills', aplicamos el color activo
+            bg={activeSection === 'contact' ? '#546e6e80' : '#374f4f5e'}
+            borderRadius={'18px 18px 1px 1px'}
+            padding={'0.2rem 1rem'}
+            _hover={{ bg: activeSection === 'contact' ? '#546e6e80' : '#4a6b6b', cursor: 'pointer' }}
+            onClick={() => setActiveSection('contact')}
+          >
+            <HStack spacing={0} position={'relative'}>
+              <Box color={activeSection === 'contact' ? 'white' : 'gray.400'} fontSize={"xl"} fontWeight={"bold"} > Contact </Box>
+              <Icon as={MdClose} color='gray.100' h={4} w={6} marginLeft={'6rem'} marginTop={'.2vw'} />
             </HStack>
           </Box>
 

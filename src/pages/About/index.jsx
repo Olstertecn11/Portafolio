@@ -37,7 +37,7 @@ export default function AboutMe() {
         />
 
         <Box mt={6}>
-          <Text color={'#a2b0b0'} fontSize={'lg'} fontFamily={'JetBrains Mono, monospace'} textAlign={'justify'} lineHeight={'1.6'}>
+          <Box color={'#a2b0b0'} fontSize={'lg'} fontFamily={'JetBrains Mono, monospace'} textAlign={'justify'} lineHeight={'1.6'}>
 
             {/* INFO DE USUARIO */}
             <Box mb={6} borderLeft="3px solid #5e81ac" pl={4}>
@@ -74,7 +74,7 @@ export default function AboutMe() {
             </Box>
 
             <Text mt={8} color="#434c5e" textAlign="center">-- END OF FILE --</Text>
-          </Text>
+          </Box>
         </Box>
       </Box>
     </div >

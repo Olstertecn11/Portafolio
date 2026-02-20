@@ -38,7 +38,7 @@ export default function Skills() {
         />
 
         <Box mt={6}>
-          <Text color={'#a2b0b0'} fontSize={'lg'} fontFamily={'JetBrains Mono, monospace'} lineHeight={'1.6'}>
+          <Box color={'#a2b0b0'} fontSize={'lg'} fontFamily={'JetBrains Mono, monospace'} lineHeight={'1.6'}>
 
             <Text color="#ebcb8b" fontWeight="bold" mb={4}>
               "Quizás no sepa todo, pero te aseguro que lo que puedas imaginar, puedo hacerlo."
@@ -104,7 +104,7 @@ export default function Skills() {
             </Box>
 
             <Text mt={8} color="#555f74" textAlign="center">-- END OF SKILLS --</Text>
-          </Text>
+          </Box>
         </Box>
       </Box>
     </div>
